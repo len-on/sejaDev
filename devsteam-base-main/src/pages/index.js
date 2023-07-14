@@ -19,15 +19,30 @@ export default function Home() {
           <Navbar />
           <Container>
             <div className={styles.session}>
-              <Subtitle><h2>Promoções</h2></Subtitle>
+              <Subtitle>Promoções</Subtitle>
               <div className={styles.salecontainer}> 
-                <SaleCard />
-                <SaleCard />
-                <SaleCard />
+                <SaleCard
+                  image={'league-of-legends.jpg'}
+                  discount={'30%'}
+                  fullPrice={'49,90'}
+                  discountPrice={'34,90'}
+                />
+                <SaleCard 
+                  image={'dota-2.jpg'}
+                  discount={'25%'}
+                  fullPrice={'49,90'}
+                  discountPrice={'37,50'}
+                />
+                <SaleCard 
+                  image={'valorant.jpg'}
+                  discount={'10%'}
+                  fullPrice={'49,90'}
+                  discountPrice={'40,90'}
+                />
               </div>
             </div>
             <div className={styles.session}>
-              <Subtitle><h2>Outros Jogos</h2></Subtitle>
+              <Subtitle>Outros Jogos</Subtitle>
               <div className={styles.gamecontainer}>
                 <GameCard />
                 <GameCard />
