@@ -3,7 +3,7 @@ import styles from './cartButton.module.css'
 import { BsCart4 } from 'react-icons/bs'
 import CartMenu from '@/components/cartMenu/cartMenu';
 
-const CartButton = () => {
+const CartButton = ({ cart, onRemove }) => {
     const [open, setOpen] = useState()
     return (
         <div>
@@ -12,7 +12,10 @@ const CartButton = () => {
                 size={40} 
                 onClick={() => {setOpen(!open)}}
             />
-            {open && <CartMenu />}
+            {open && <CartMenu 
+                cart={cart}
+                onRemove={onRemove}
+            />}
         </div>
     )
 }
